@@ -1,5 +1,7 @@
 export * from './defaultApi';
 import { DefaultApi } from './defaultApi';
+export * from './reviewAppsApi';
+import { ReviewAppsApi } from './reviewAppsApi';
 import * as http from 'http';
 
 export class HttpError extends Error {
@@ -11,4 +13,4 @@ export class HttpError extends Error {
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [DefaultApi];
+export const APIS = [DefaultApi, ReviewAppsApi];

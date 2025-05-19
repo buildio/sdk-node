@@ -8,10 +8,12 @@ export * from './appTeam';
 export * from './createAppRequest';
 export * from './createBuildRequest';
 export * from './createNamespaceRequest';
+export * from './createReviewAppRequest';
 export * from './dyno';
 export * from './dynoExecRequest';
 export * from './dynoExecResponse';
 export * from './meResponse';
+export * from './modelError';
 export * from './namespace';
 export * from './namespaceActor';
 export * from './namespaceTeam';
@@ -42,10 +44,12 @@ import { AppTeam } from './appTeam';
 import { CreateAppRequest } from './createAppRequest';
 import { CreateBuildRequest } from './createBuildRequest';
 import { CreateNamespaceRequest } from './createNamespaceRequest';
+import { CreateReviewAppRequest } from './createReviewAppRequest';
 import { Dyno } from './dyno';
 import { DynoExecRequest } from './dynoExecRequest';
 import { DynoExecResponse } from './dynoExecResponse';
 import { MeResponse } from './meResponse';
+import { ModelError } from './modelError';
 import { Namespace } from './namespace';
 import { NamespaceActor } from './namespaceActor';
 import { NamespaceTeam } from './namespaceTeam';
@@ -79,10 +83,12 @@ let typeMap: {[index: string]: any} = {
     "CreateAppRequest": CreateAppRequest,
     "CreateBuildRequest": CreateBuildRequest,
     "CreateNamespaceRequest": CreateNamespaceRequest,
+    "CreateReviewAppRequest": CreateReviewAppRequest,
     "Dyno": Dyno,
     "DynoExecRequest": DynoExecRequest,
     "DynoExecResponse": DynoExecResponse,
     "MeResponse": MeResponse,
+    "ModelError": ModelError,
     "Namespace": Namespace,
     "NamespaceActor": NamespaceActor,
     "NamespaceTeam": NamespaceTeam,
