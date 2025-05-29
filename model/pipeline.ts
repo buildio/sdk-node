@@ -11,42 +11,46 @@
  */
 
 import { RequestFile } from './models';
+import { PipelineTeam } from './pipelineTeam';
 
-export class ModelError {
-    /**
-    * Machine-readable error code
-    */
-    'code': string;
-    /**
-    * Human-readable error message
-    */
-    'message'?: string;
-    /**
-    * Additional error details (optional)
-    */
-    'details'?: { [key: string]: any; };
+export class Pipeline {
+    'id': string;
+    'name': string;
+    'team': PipelineTeam;
+    'createdAt'?: string;
+    'updatedAt'?: string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "code",
-            "baseName": "code",
+            "name": "id",
+            "baseName": "id",
             "type": "string"
         },
         {
-            "name": "message",
-            "baseName": "message",
+            "name": "name",
+            "baseName": "name",
             "type": "string"
         },
         {
-            "name": "details",
-            "baseName": "details",
-            "type": "{ [key: string]: any; }"
+            "name": "team",
+            "baseName": "team",
+            "type": "PipelineTeam"
+        },
+        {
+            "name": "createdAt",
+            "baseName": "created_at",
+            "type": "string"
+        },
+        {
+            "name": "updatedAt",
+            "baseName": "updated_at",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return ModelError.attributeTypeMap;
+        return Pipeline.attributeTypeMap;
     }
 }
 

@@ -12,41 +12,32 @@
 
 import { RequestFile } from './models';
 
-export class ModelError {
-    /**
-    * Machine-readable error code
-    */
-    'code': string;
-    /**
-    * Human-readable error message
-    */
-    'message'?: string;
-    /**
-    * Additional error details (optional)
-    */
-    'details'?: { [key: string]: any; };
+export class ValidationErrors {
+    'error': string;
+    'errorDescription'?: string;
+    'details'?: { [key: string]: Array<string>; };
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "code",
-            "baseName": "code",
+            "name": "error",
+            "baseName": "error",
             "type": "string"
         },
         {
-            "name": "message",
-            "baseName": "message",
+            "name": "errorDescription",
+            "baseName": "error_description",
             "type": "string"
         },
         {
             "name": "details",
             "baseName": "details",
-            "type": "{ [key: string]: any; }"
+            "type": "{ [key: string]: Array<string>; }"
         }    ];
 
     static getAttributeTypeMap() {
-        return ModelError.attributeTypeMap;
+        return ValidationErrors.attributeTypeMap;
     }
 }
 

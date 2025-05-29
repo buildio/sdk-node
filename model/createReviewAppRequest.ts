@@ -38,6 +38,10 @@ export class CreateReviewAppRequest {
     */
     'githubRepo'?: string | null;
     /**
+    * Stack to use for the app (e.g., heroku-24, heroku-22)
+    */
+    'stack'?: string | null;
+    /**
     * Environment variables for the app
     */
     'environment'?: { [key: string]: string; };
@@ -73,6 +77,11 @@ export class CreateReviewAppRequest {
         {
             "name": "githubRepo",
             "baseName": "github_repo",
+            "type": "string"
+        },
+        {
+            "name": "stack",
+            "baseName": "stack",
             "type": "string"
         },
         {

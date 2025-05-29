@@ -12,41 +12,26 @@
 
 import { RequestFile } from './models';
 
-export class ModelError {
-    /**
-    * Machine-readable error code
-    */
-    'code': string;
-    /**
-    * Human-readable error message
-    */
-    'message'?: string;
-    /**
-    * Additional error details (optional)
-    */
-    'details'?: { [key: string]: any; };
+export class PipelineTeam {
+    'id'?: string;
+    'name'?: string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "code",
-            "baseName": "code",
+            "name": "id",
+            "baseName": "id",
             "type": "string"
         },
         {
-            "name": "message",
-            "baseName": "message",
+            "name": "name",
+            "baseName": "name",
             "type": "string"
-        },
-        {
-            "name": "details",
-            "baseName": "details",
-            "type": "{ [key: string]: any; }"
         }    ];
 
     static getAttributeTypeMap() {
-        return ModelError.attributeTypeMap;
+        return PipelineTeam.attributeTypeMap;
     }
 }
 
