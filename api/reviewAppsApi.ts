@@ -17,7 +17,7 @@ import http from 'http';
 /* tslint:disable:no-unused-locals */
 import { App } from '../model/app';
 import { CreateReviewAppRequest } from '../model/createReviewAppRequest';
-import { ModelError } from '../model/modelError';
+import { ErrorResponse } from '../model/errorResponse';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
 import { HttpBasicAuth, HttpBearerAuth, ApiKeyAuth, OAuth } from '../model/models';
@@ -104,7 +104,7 @@ export class ReviewAppsApi {
     /**
      * Creates a new review app for a pipeline.
      * @summary create a review app
-     * @param pipelineId Pipeline ID
+     * @param pipelineId Pipeline ID or Name
      * @param createReviewAppRequest 
      */
     public async createReviewApp (pipelineId: string, createReviewAppRequest?: CreateReviewAppRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: App;  }> {
@@ -386,7 +386,7 @@ export class ReviewAppsApi {
     /**
      * Lists all review apps for a given pipeline.
      * @summary list review apps for a pipeline
-     * @param pipelineId Pipeline ID
+     * @param pipelineId Pipeline ID or Name
      */
     public async listReviewApps (pipelineId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<App>;  }> {
         const localVarPath = this.basePath + '/api/v1/pipelines/{pipeline_id}/review-apps'

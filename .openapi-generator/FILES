@@ -17,8 +17,9 @@ model/createReviewAppRequest.ts
 model/dyno.ts
 model/dynoExecRequest.ts
 model/dynoExecResponse.ts
+model/errorResponse.ts
+model/execOutput.ts
 model/meResponse.ts
-model/modelError.ts
 model/models.ts
 model/namespace.ts
 model/namespaceActor.ts

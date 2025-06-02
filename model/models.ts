@@ -12,8 +12,9 @@ export * from './createReviewAppRequest';
 export * from './dyno';
 export * from './dynoExecRequest';
 export * from './dynoExecResponse';
+export * from './errorResponse';
+export * from './execOutput';
 export * from './meResponse';
-export * from './modelError';
 export * from './namespace';
 export * from './namespaceActor';
 export * from './namespaceTeam';
@@ -51,8 +52,9 @@ import { CreateReviewAppRequest } from './createReviewAppRequest';
 import { Dyno } from './dyno';
 import { DynoExecRequest } from './dynoExecRequest';
 import { DynoExecResponse } from './dynoExecResponse';
+import { ErrorResponse } from './errorResponse';
+import { ExecOutput } from './execOutput';
 import { MeResponse } from './meResponse';
-import { ModelError } from './modelError';
 import { Namespace } from './namespace';
 import { NamespaceActor } from './namespaceActor';
 import { NamespaceTeam } from './namespaceTeam';
@@ -93,8 +95,9 @@ let typeMap: {[index: string]: any} = {
     "Dyno": Dyno,
     "DynoExecRequest": DynoExecRequest,
     "DynoExecResponse": DynoExecResponse,
+    "ErrorResponse": ErrorResponse,
+    "ExecOutput": ExecOutput,
     "MeResponse": MeResponse,
-    "ModelError": ModelError,
     "Namespace": Namespace,
     "NamespaceActor": NamespaceActor,
     "NamespaceTeam": NamespaceTeam,
