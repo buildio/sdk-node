@@ -2,8 +2,6 @@
 api.ts
 api/apis.ts
 api/defaultApi.ts
-api/pipelinesApi.ts
-api/reviewAppsApi.ts
 git_push.sh
 model/app.ts
 model/appBuildpack.ts
@@ -13,7 +11,6 @@ model/appTeam.ts
 model/createAppRequest.ts
 model/createBuildRequest.ts
 model/createNamespaceRequest.ts
-model/createReviewAppRequest.ts
 model/dyno.ts
 model/dynoExecRequest.ts
 model/dynoExecResponse.ts
@@ -27,8 +24,6 @@ model/namespaceTeam.ts
 model/oidcLoginResponse.ts
 model/oidcLoginResponseSpec.ts
 model/oidcLoginResponseStatus.ts
-model/pipeline.ts
-model/pipelineTeam.ts
 model/process.ts
 model/team.ts
 model/validationErrors.ts
