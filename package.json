@@ -1,6 +1,6 @@
 {
     "name": "@buildio/sdk-node",
-    "version": "1.0.31",
+    "version": "1.0.33",
     "description": "NodeJS client for @buildio/sdk-node",
     "repository": {
         "type": "git",
