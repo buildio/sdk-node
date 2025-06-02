@@ -2,6 +2,7 @@
 api.ts
 api/apis.ts
 api/defaultApi.ts
+api/pipelinesApi.ts
 git_push.sh
 model/app.ts
 model/appBuildpack.ts
@@ -24,6 +25,8 @@ model/namespaceTeam.ts
 model/oidcLoginResponse.ts
 model/oidcLoginResponseSpec.ts
 model/oidcLoginResponseStatus.ts
+model/pipeline.ts
+model/pipelineTeam.ts
 model/process.ts
 model/team.ts
 model/validationErrors.ts
