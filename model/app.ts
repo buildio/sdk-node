@@ -43,6 +43,7 @@ export class App {
     'createdAt'?: string;
     'updatedAt'?: string;
     'deletedAt'?: string | null;
+    'branch'?: string | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -175,6 +176,11 @@ export class App {
         {
             "name": "deletedAt",
             "baseName": "deleted_at",
+            "type": "string"
+        },
+        {
+            "name": "branch",
+            "baseName": "branch",
             "type": "string"
         }    ];
 
