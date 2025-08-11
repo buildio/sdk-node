@@ -21,6 +21,7 @@ export * from './oidcLoginResponse';
 export * from './oidcLoginResponseSpec';
 export * from './oidcLoginResponseStatus';
 export * from './pipeline';
+export * from './pipelineEnvironmentsInner';
 export * from './pipelineTeam';
 export * from './process';
 export * from './team';
@@ -60,6 +61,7 @@ import { OidcLoginResponse } from './oidcLoginResponse';
 import { OidcLoginResponseSpec } from './oidcLoginResponseSpec';
 import { OidcLoginResponseStatus } from './oidcLoginResponseStatus';
 import { Pipeline } from './pipeline';
+import { PipelineEnvironmentsInner } from './pipelineEnvironmentsInner';
 import { PipelineTeam } from './pipelineTeam';
 import { Process } from './process';
 import { Team } from './team';
@@ -78,6 +80,7 @@ let primitives = [
                  ];
 
 let enumsMap: {[index: string]: any} = {
+        "PipelineEnvironmentsInner.KindEnum": PipelineEnvironmentsInner.KindEnum,
 }
 
 let typeMap: {[index: string]: any} = {
@@ -102,6 +105,7 @@ let typeMap: {[index: string]: any} = {
     "OidcLoginResponseSpec": OidcLoginResponseSpec,
     "OidcLoginResponseStatus": OidcLoginResponseStatus,
     "Pipeline": Pipeline,
+    "PipelineEnvironmentsInner": PipelineEnvironmentsInner,
     "PipelineTeam": PipelineTeam,
     "Process": Process,
     "Team": Team,

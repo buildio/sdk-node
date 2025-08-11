@@ -11,12 +11,14 @@
  */
 
 import { RequestFile } from './models';
+import { PipelineEnvironmentsInner } from './pipelineEnvironmentsInner';
 import { PipelineTeam } from './pipelineTeam';
 
 export class Pipeline {
     'id': string;
     'name': string;
     'team': PipelineTeam;
+    'environments'?: Array<PipelineEnvironmentsInner>;
     'createdAt'?: string;
     'updatedAt'?: string;
 
@@ -37,6 +39,11 @@ export class Pipeline {
             "name": "team",
             "baseName": "team",
             "type": "PipelineTeam"
+        },
+        {
+            "name": "environments",
+            "baseName": "environments",
+            "type": "Array<PipelineEnvironmentsInner>"
         },
         {
             "name": "createdAt",

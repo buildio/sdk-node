@@ -26,6 +26,7 @@ model/oidcLoginResponse.ts
 model/oidcLoginResponseSpec.ts
 model/oidcLoginResponseStatus.ts
 model/pipeline.ts
+model/pipelineEnvironmentsInner.ts
 model/pipelineTeam.ts
 model/process.ts
 model/team.ts
