@@ -44,6 +44,7 @@ export class App {
     'updatedAt'?: string;
     'deletedAt'?: string | null;
     'branch'?: string | null;
+    'environmentId'?: string;
 
     static discriminator: string | undefined = undefined;
 
@@ -181,6 +182,11 @@ export class App {
         {
             "name": "branch",
             "baseName": "branch",
+            "type": "string"
+        },
+        {
+            "name": "environmentId",
+            "baseName": "environment_id",
             "type": "string"
         }    ];
 
