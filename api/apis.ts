@@ -1,5 +1,7 @@
 export * from './defaultApi';
 import { DefaultApi } from './defaultApi';
+export * from './domainsApi';
+import { DomainsApi } from './domainsApi';
 export * from './pipelinesApi';
 import { PipelinesApi } from './pipelinesApi';
 import * as http from 'http';
@@ -13,4 +15,4 @@ export class HttpError extends Error {
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [DefaultApi, PipelinesApi];
+export const APIS = [DefaultApi, DomainsApi, PipelinesApi];

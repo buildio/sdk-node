@@ -7,7 +7,11 @@ export * from './appPipeline';
 export * from './appTeam';
 export * from './createAppRequest';
 export * from './createBuildRequest';
+export * from './createDomainRequest';
 export * from './createNamespaceRequest';
+export * from './domain';
+export * from './domainApp';
+export * from './domainSniEndpoint';
 export * from './dyno';
 export * from './dynoExecRequest';
 export * from './dynoExecResponse';
@@ -25,6 +29,7 @@ export * from './pipelineEnvironmentsInner';
 export * from './pipelineTeam';
 export * from './process';
 export * from './team';
+export * from './updateDomainRequest';
 export * from './validationErrors';
 
 import * as fs from 'fs';
@@ -47,7 +52,11 @@ import { AppPipeline } from './appPipeline';
 import { AppTeam } from './appTeam';
 import { CreateAppRequest } from './createAppRequest';
 import { CreateBuildRequest } from './createBuildRequest';
+import { CreateDomainRequest } from './createDomainRequest';
 import { CreateNamespaceRequest } from './createNamespaceRequest';
+import { Domain } from './domain';
+import { DomainApp } from './domainApp';
+import { DomainSniEndpoint } from './domainSniEndpoint';
 import { Dyno } from './dyno';
 import { DynoExecRequest } from './dynoExecRequest';
 import { DynoExecResponse } from './dynoExecResponse';
@@ -65,6 +74,7 @@ import { PipelineEnvironmentsInner } from './pipelineEnvironmentsInner';
 import { PipelineTeam } from './pipelineTeam';
 import { Process } from './process';
 import { Team } from './team';
+import { UpdateDomainRequest } from './updateDomainRequest';
 import { ValidationErrors } from './validationErrors';
 
 /* tslint:disable:no-unused-variable */
@@ -80,6 +90,8 @@ let primitives = [
                  ];
 
 let enumsMap: {[index: string]: any} = {
+        "Domain.KindEnum": Domain.KindEnum,
+        "Domain.StatusEnum": Domain.StatusEnum,
         "PipelineEnvironmentsInner.KindEnum": PipelineEnvironmentsInner.KindEnum,
 }
 
@@ -91,7 +103,11 @@ let typeMap: {[index: string]: any} = {
     "AppTeam": AppTeam,
     "CreateAppRequest": CreateAppRequest,
     "CreateBuildRequest": CreateBuildRequest,
+    "CreateDomainRequest": CreateDomainRequest,
     "CreateNamespaceRequest": CreateNamespaceRequest,
+    "Domain": Domain,
+    "DomainApp": DomainApp,
+    "DomainSniEndpoint": DomainSniEndpoint,
     "Dyno": Dyno,
     "DynoExecRequest": DynoExecRequest,
     "DynoExecResponse": DynoExecResponse,
@@ -109,6 +125,7 @@ let typeMap: {[index: string]: any} = {
     "PipelineTeam": PipelineTeam,
     "Process": Process,
     "Team": Team,
+    "UpdateDomainRequest": UpdateDomainRequest,
     "ValidationErrors": ValidationErrors,
 }
 

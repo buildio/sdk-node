@@ -2,6 +2,7 @@
 api.ts
 api/apis.ts
 api/defaultApi.ts
+api/domainsApi.ts
 api/pipelinesApi.ts
 git_push.sh
 model/app.ts
@@ -11,7 +12,11 @@ model/appPipeline.ts
 model/appTeam.ts
 model/createAppRequest.ts
 model/createBuildRequest.ts
+model/createDomainRequest.ts
 model/createNamespaceRequest.ts
+model/domain.ts
+model/domainApp.ts
+model/domainSniEndpoint.ts
 model/dyno.ts
 model/dynoExecRequest.ts
 model/dynoExecResponse.ts
@@ -30,6 +35,7 @@ model/pipelineEnvironmentsInner.ts
 model/pipelineTeam.ts
 model/process.ts
 model/team.ts
+model/updateDomainRequest.ts
 model/validationErrors.ts
 package.json
 tsconfig.json
