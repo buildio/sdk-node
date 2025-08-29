@@ -43,6 +43,13 @@ export class App {
     'createdAt'?: string;
     'updatedAt'?: string;
     'deletedAt'?: string | null;
+    /**
+    * Full HTTPS URL for the application
+    */
+    'webUrl'?: string;
+    /**
+    * GitHub branch for the application
+    */
     'branch'?: string | null;
     'environmentId'?: string;
 
@@ -177,6 +184,11 @@ export class App {
         {
             "name": "deletedAt",
             "baseName": "deleted_at",
+            "type": "string"
+        },
+        {
+            "name": "webUrl",
+            "baseName": "web_url",
             "type": "string"
         },
         {
