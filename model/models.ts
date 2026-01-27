@@ -4,8 +4,10 @@ export * from './addon';
 export * from './addonApp';
 export * from './addonAttachment';
 export * from './addonBilledPrice';
+export * from './addonInfoAttachment';
 export * from './addonPlan';
 export * from './addonService';
+export * from './addonWithAttachments';
 export * from './app';
 export * from './appBuildpack';
 export * from './appFormationValue';
@@ -59,8 +61,10 @@ import { Addon } from './addon';
 import { AddonApp } from './addonApp';
 import { AddonAttachment } from './addonAttachment';
 import { AddonBilledPrice } from './addonBilledPrice';
+import { AddonInfoAttachment } from './addonInfoAttachment';
 import { AddonPlan } from './addonPlan';
 import { AddonService } from './addonService';
+import { AddonWithAttachments } from './addonWithAttachments';
 import { App } from './app';
 import { AppBuildpack } from './appBuildpack';
 import { AppFormationValue } from './appFormationValue';
@@ -112,6 +116,8 @@ let primitives = [
 let enumsMap: {[index: string]: any} = {
         "Addon.StateEnum": Addon.StateEnum,
         "AddonAttachment.StateEnum": AddonAttachment.StateEnum,
+        "AddonInfoAttachment.StateEnum": AddonInfoAttachment.StateEnum,
+        "AddonWithAttachments.StateEnum": AddonWithAttachments.StateEnum,
         "Domain.KindEnum": Domain.KindEnum,
         "Domain.StatusEnum": Domain.StatusEnum,
         "PipelineEnvironmentsInner.KindEnum": PipelineEnvironmentsInner.KindEnum,
@@ -122,8 +128,10 @@ let typeMap: {[index: string]: any} = {
     "AddonApp": AddonApp,
     "AddonAttachment": AddonAttachment,
     "AddonBilledPrice": AddonBilledPrice,
+    "AddonInfoAttachment": AddonInfoAttachment,
     "AddonPlan": AddonPlan,
     "AddonService": AddonService,
+    "AddonWithAttachments": AddonWithAttachments,
     "App": App,
     "AppBuildpack": AppBuildpack,
     "AppFormationValue": AppFormationValue,

@@ -11,8 +11,10 @@ model/addon.ts
 model/addonApp.ts
 model/addonAttachment.ts
 model/addonBilledPrice.ts
+model/addonInfoAttachment.ts
 model/addonPlan.ts
 model/addonService.ts
+model/addonWithAttachments.ts
 model/app.ts
 model/appBuildpack.ts
 model/appFormationValue.ts
@@ -49,5 +51,3 @@ model/process.ts
 model/team.ts
 model/updateDomainRequest.ts
 model/validationErrors.ts
-package.json
-tsconfig.json

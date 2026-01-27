@@ -270,13 +270,6 @@ export class DefaultApi {
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['application/json'];
-        // give precedence to 'application/json'
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = 'application/json';
-        } else {
-            localVarHeaderParams.Accept = produces.join(',');
-        }
         let localVarFormParams: any = {};
 
         // verify required parameter 'id' is not null or undefined
@@ -1510,13 +1503,6 @@ export class DefaultApi {
             .replace('{' + 'app_id_or_name' + '}', encodeURIComponent(String(appIdOrName)));
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['application/json'];
-        // give precedence to 'application/json'
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = 'application/json';
-        } else {
-            localVarHeaderParams.Accept = produces.join(',');
-        }
         let localVarFormParams: any = {};
 
         // verify required parameter 'appIdOrName' is not null or undefined
