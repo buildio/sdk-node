@@ -1,13 +1,23 @@
 import localVarRequest from 'request';
 
+export * from './addon';
+export * from './addonApp';
+export * from './addonAttachment';
+export * from './addonBilledPrice';
+export * from './addonPlan';
+export * from './addonService';
 export * from './app';
 export * from './appBuildpack';
 export * from './appFormationValue';
 export * from './appPipeline';
 export * from './appTeam';
+export * from './attachmentAddon';
+export * from './createAddonAttachmentRequest';
+export * from './createAddonRequest';
 export * from './createAppRequest';
 export * from './createBuildRequest';
 export * from './createDomainRequest';
+export * from './createNamespace410Response';
 export * from './createNamespaceRequest';
 export * from './domain';
 export * from './domainApp';
@@ -45,14 +55,24 @@ export interface RequestDetailedFile {
 export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 
+import { Addon } from './addon';
+import { AddonApp } from './addonApp';
+import { AddonAttachment } from './addonAttachment';
+import { AddonBilledPrice } from './addonBilledPrice';
+import { AddonPlan } from './addonPlan';
+import { AddonService } from './addonService';
 import { App } from './app';
 import { AppBuildpack } from './appBuildpack';
 import { AppFormationValue } from './appFormationValue';
 import { AppPipeline } from './appPipeline';
 import { AppTeam } from './appTeam';
+import { AttachmentAddon } from './attachmentAddon';
+import { CreateAddonAttachmentRequest } from './createAddonAttachmentRequest';
+import { CreateAddonRequest } from './createAddonRequest';
 import { CreateAppRequest } from './createAppRequest';
 import { CreateBuildRequest } from './createBuildRequest';
 import { CreateDomainRequest } from './createDomainRequest';
+import { CreateNamespace410Response } from './createNamespace410Response';
 import { CreateNamespaceRequest } from './createNamespaceRequest';
 import { Domain } from './domain';
 import { DomainApp } from './domainApp';
@@ -90,20 +110,32 @@ let primitives = [
                  ];
 
 let enumsMap: {[index: string]: any} = {
+        "Addon.StateEnum": Addon.StateEnum,
+        "AddonAttachment.StateEnum": AddonAttachment.StateEnum,
         "Domain.KindEnum": Domain.KindEnum,
         "Domain.StatusEnum": Domain.StatusEnum,
         "PipelineEnvironmentsInner.KindEnum": PipelineEnvironmentsInner.KindEnum,
 }
 
 let typeMap: {[index: string]: any} = {
+    "Addon": Addon,
+    "AddonApp": AddonApp,
+    "AddonAttachment": AddonAttachment,
+    "AddonBilledPrice": AddonBilledPrice,
+    "AddonPlan": AddonPlan,
+    "AddonService": AddonService,
     "App": App,
     "AppBuildpack": AppBuildpack,
     "AppFormationValue": AppFormationValue,
     "AppPipeline": AppPipeline,
     "AppTeam": AppTeam,
+    "AttachmentAddon": AttachmentAddon,
+    "CreateAddonAttachmentRequest": CreateAddonAttachmentRequest,
+    "CreateAddonRequest": CreateAddonRequest,
     "CreateAppRequest": CreateAppRequest,
     "CreateBuildRequest": CreateBuildRequest,
     "CreateDomainRequest": CreateDomainRequest,
+    "CreateNamespace410Response": CreateNamespace410Response,
     "CreateNamespaceRequest": CreateNamespaceRequest,
     "Domain": Domain,
     "DomainApp": DomainApp,

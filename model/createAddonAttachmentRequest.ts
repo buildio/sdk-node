@@ -12,47 +12,50 @@
 
 import { RequestFile } from './models';
 
-export class CreateNamespaceRequest {
-    'name': string;
+export class CreateAddonAttachmentRequest {
     /**
-    * Zone ID (required - namespaces are zone-scoped)
+    * Addon name or ID to attach
     */
-    'zoneId': string;
-    'teamId'?: string | null;
-    'description'?: string | null;
-    'region'?: string | null;
+    'addon': string;
+    /**
+    * App name or ID to attach the addon to
+    */
+    'app': string;
+    /**
+    * Attachment name (e.g., DATABASE_RED)
+    */
+    'name'?: string | null;
+    /**
+    * Owning app name for confirmation
+    */
+    'confirm'?: string | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+        {
+            "name": "addon",
+            "baseName": "addon",
+            "type": "string"
+        },
+        {
+            "name": "app",
+            "baseName": "app",
+            "type": "string"
+        },
         {
             "name": "name",
             "baseName": "name",
             "type": "string"
         },
         {
-            "name": "zoneId",
-            "baseName": "zone_id",
-            "type": "string"
-        },
-        {
-            "name": "teamId",
-            "baseName": "team_id",
-            "type": "string"
-        },
-        {
-            "name": "description",
-            "baseName": "description",
-            "type": "string"
-        },
-        {
-            "name": "region",
-            "baseName": "region",
+            "name": "confirm",
+            "baseName": "confirm",
             "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return CreateNamespaceRequest.attributeTypeMap;
+        return CreateAddonAttachmentRequest.attributeTypeMap;
     }
 }
 
