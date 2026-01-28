@@ -28,7 +28,7 @@ export class CreateAddonRequest {
     /**
     * Addon-specific configuration options (use list-addon-fields to discover available options for each service)
     */
-    'config'?: { [key: string]: any; };
+    'config'?: { [key: string]: string; };
 
     static discriminator: string | undefined = undefined;
 
@@ -51,7 +51,7 @@ export class CreateAddonRequest {
         {
             "name": "config",
             "baseName": "config",
-            "type": "{ [key: string]: any; }"
+            "type": "{ [key: string]: string; }"
         }    ];
 
     static getAttributeTypeMap() {
