@@ -22,6 +22,10 @@ export class CreateAddonRequest {
     */
     'name'?: string | null;
     /**
+    * User-provided description of the addon (optional)
+    */
+    'description'?: string | null;
+    /**
     * Addon-specific configuration options (use list-addon-fields to discover available options for each service)
     */
     'config'?: { [key: string]: any; };
@@ -37,6 +41,11 @@ export class CreateAddonRequest {
         {
             "name": "name",
             "baseName": "name",
+            "type": "string"
+        },
+        {
+            "name": "description",
+            "baseName": "description",
             "type": "string"
         },
         {

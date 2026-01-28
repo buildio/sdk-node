@@ -52,6 +52,14 @@ export class App {
     */
     'branch'?: string | null;
     'environmentId'?: string;
+    /**
+    * SSH host for running one-off dynos
+    */
+    'sshHost'?: string;
+    /**
+    * SSH port for running one-off dynos
+    */
+    'sshPort'?: number;
 
     static discriminator: string | undefined = undefined;
 
@@ -200,6 +208,16 @@ export class App {
             "name": "environmentId",
             "baseName": "environment_id",
             "type": "string"
+        },
+        {
+            "name": "sshHost",
+            "baseName": "ssh_host",
+            "type": "string"
+        },
+        {
+            "name": "sshPort",
+            "baseName": "ssh_port",
+            "type": "number"
         }    ];
 
     static getAttributeTypeMap() {

@@ -23,6 +23,10 @@ export class AddonWithAttachments {
     * Globally unique addon name
     */
     'name'?: string | null;
+    /**
+    * User-provided description of the addon
+    */
+    'description'?: string | null;
     'addonService': AddonService;
     'plan': AddonPlan;
     'app': AddonApp;
@@ -45,6 +49,11 @@ export class AddonWithAttachments {
         {
             "name": "name",
             "baseName": "name",
+            "type": "string"
+        },
+        {
+            "name": "description",
+            "baseName": "description",
             "type": "string"
         },
         {
