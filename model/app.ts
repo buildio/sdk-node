@@ -55,11 +55,11 @@ export class App {
     /**
     * SSH host for running one-off dynos
     */
-    'sshHost'?: string;
+    'sshHost': string;
     /**
     * SSH port for running one-off dynos
     */
-    'sshPort'?: number;
+    'sshPort': number;
 
     static discriminator: string | undefined = undefined;
 
