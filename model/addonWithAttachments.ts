@@ -24,6 +24,10 @@ export class AddonWithAttachments {
     */
     'name'?: string | null;
     /**
+    * User-provided display name for the addon
+    */
+    'humanName'?: string | null;
+    /**
     * User-provided description of the addon
     */
     'description'?: string | null;
@@ -49,6 +53,11 @@ export class AddonWithAttachments {
         {
             "name": "name",
             "baseName": "name",
+            "type": "string"
+        },
+        {
+            "name": "humanName",
+            "baseName": "human_name",
             "type": "string"
         },
         {
