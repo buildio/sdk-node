@@ -3,6 +3,7 @@ api.ts
 api/addonAttachmentsApi.ts
 api/addonsApi.ts
 api/apis.ts
+api/collaboratorsApi.ts
 api/defaultApi.ts
 api/domainsApi.ts
 api/pipelinesApi.ts
@@ -21,6 +22,9 @@ model/appFormationValue.ts
 model/appPipeline.ts
 model/appTeam.ts
 model/attachmentAddon.ts
+model/collaborator.ts
+model/collaboratorApp.ts
+model/collaboratorUser.ts
 model/createAddonAttachmentRequest.ts
 model/createAddonRequest.ts
 model/createAppRequest.ts
@@ -49,5 +53,6 @@ model/pipelineEnvironmentsInner.ts
 model/pipelineTeam.ts
 model/process.ts
 model/team.ts
+model/updateAppRequest.ts
 model/updateDomainRequest.ts
 model/validationErrors.ts

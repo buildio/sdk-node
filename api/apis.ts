@@ -2,6 +2,8 @@ export * from './addonAttachmentsApi';
 import { AddonAttachmentsApi } from './addonAttachmentsApi';
 export * from './addonsApi';
 import { AddonsApi } from './addonsApi';
+export * from './collaboratorsApi';
+import { CollaboratorsApi } from './collaboratorsApi';
 export * from './defaultApi';
 import { DefaultApi } from './defaultApi';
 export * from './domainsApi';
@@ -19,4 +21,4 @@ export class HttpError extends Error {
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [AddonAttachmentsApi, AddonsApi, DefaultApi, DomainsApi, PipelinesApi];
+export const APIS = [AddonAttachmentsApi, AddonsApi, CollaboratorsApi, DefaultApi, DomainsApi, PipelinesApi];

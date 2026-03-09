@@ -14,6 +14,9 @@ export * from './appFormationValue';
 export * from './appPipeline';
 export * from './appTeam';
 export * from './attachmentAddon';
+export * from './collaborator';
+export * from './collaboratorApp';
+export * from './collaboratorUser';
 export * from './createAddonAttachmentRequest';
 export * from './createAddonRequest';
 export * from './createAppRequest';
@@ -41,6 +44,7 @@ export * from './pipelineEnvironmentsInner';
 export * from './pipelineTeam';
 export * from './process';
 export * from './team';
+export * from './updateAppRequest';
 export * from './updateDomainRequest';
 export * from './validationErrors';
 
@@ -71,6 +75,9 @@ import { AppFormationValue } from './appFormationValue';
 import { AppPipeline } from './appPipeline';
 import { AppTeam } from './appTeam';
 import { AttachmentAddon } from './attachmentAddon';
+import { Collaborator } from './collaborator';
+import { CollaboratorApp } from './collaboratorApp';
+import { CollaboratorUser } from './collaboratorUser';
 import { CreateAddonAttachmentRequest } from './createAddonAttachmentRequest';
 import { CreateAddonRequest } from './createAddonRequest';
 import { CreateAppRequest } from './createAppRequest';
@@ -98,6 +105,7 @@ import { PipelineEnvironmentsInner } from './pipelineEnvironmentsInner';
 import { PipelineTeam } from './pipelineTeam';
 import { Process } from './process';
 import { Team } from './team';
+import { UpdateAppRequest } from './updateAppRequest';
 import { UpdateDomainRequest } from './updateDomainRequest';
 import { ValidationErrors } from './validationErrors';
 
@@ -138,6 +146,9 @@ let typeMap: {[index: string]: any} = {
     "AppPipeline": AppPipeline,
     "AppTeam": AppTeam,
     "AttachmentAddon": AttachmentAddon,
+    "Collaborator": Collaborator,
+    "CollaboratorApp": CollaboratorApp,
+    "CollaboratorUser": CollaboratorUser,
     "CreateAddonAttachmentRequest": CreateAddonAttachmentRequest,
     "CreateAddonRequest": CreateAddonRequest,
     "CreateAppRequest": CreateAppRequest,
@@ -165,6 +176,7 @@ let typeMap: {[index: string]: any} = {
     "PipelineTeam": PipelineTeam,
     "Process": Process,
     "Team": Team,
+    "UpdateAppRequest": UpdateAppRequest,
     "UpdateDomainRequest": UpdateDomainRequest,
     "ValidationErrors": ValidationErrors,
 }

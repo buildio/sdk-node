@@ -29,7 +29,14 @@ export class App {
     'currentImageId'?: string | null;
     'currentDeploymentId'?: string | null;
     'formation'?: { [key: string]: AppFormationValue; };
-    'stack': string;
+    /**
+    * Stack for the next build (Heroku: build_stack)
+    */
+    'buildStack': string;
+    /**
+    * Stack currently deployed (Heroku: stack)
+    */
+    'stack'?: string;
     'region': string;
     'buildpacks'?: Array<AppBuildpack>;
     'description'?: string | null;
@@ -123,6 +130,11 @@ export class App {
             "name": "formation",
             "baseName": "formation",
             "type": "{ [key: string]: AppFormationValue; }"
+        },
+        {
+            "name": "buildStack",
+            "baseName": "build_stack",
+            "type": "string"
         },
         {
             "name": "stack",
