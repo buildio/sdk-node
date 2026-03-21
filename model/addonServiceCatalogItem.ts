@@ -21,7 +21,6 @@ export class AddonServiceCatalogItem {
     'supportsLogDrains'?: boolean;
     'supportsSharing'?: boolean;
     'supportsMultipleInstallations'?: boolean;
-    'isVisible'?: boolean;
     'category'?: AddonServiceCategory;
 
     static discriminator: string | undefined = undefined;
@@ -60,11 +59,6 @@ export class AddonServiceCatalogItem {
         {
             "name": "supportsMultipleInstallations",
             "baseName": "supports_multiple_installations",
-            "type": "boolean"
-        },
-        {
-            "name": "isVisible",
-            "baseName": "is_visible",
             "type": "boolean"
         },
         {

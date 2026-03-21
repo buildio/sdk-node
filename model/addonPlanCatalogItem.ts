@@ -19,7 +19,6 @@ export class AddonPlanCatalogItem {
     'humanName': string;
     'description'?: string | null;
     'state': string;
-    'isVisible'?: boolean;
     'monthlyPrice'?: AddonPlanPrice;
     'yearlyPrice'?: AddonPlanPrice;
 
@@ -50,11 +49,6 @@ export class AddonPlanCatalogItem {
             "name": "state",
             "baseName": "state",
             "type": "string"
-        },
-        {
-            "name": "isVisible",
-            "baseName": "is_visible",
-            "type": "boolean"
         },
         {
             "name": "monthlyPrice",
