@@ -6,7 +6,11 @@ export * from './addonAttachment';
 export * from './addonBilledPrice';
 export * from './addonInfoAttachment';
 export * from './addonPlan';
+export * from './addonPlanCatalogItem';
+export * from './addonPlanPrice';
 export * from './addonService';
+export * from './addonServiceCatalogItem';
+export * from './addonServiceCategory';
 export * from './addonWithAttachments';
 export * from './app';
 export * from './appBuildpack';
@@ -32,6 +36,8 @@ export * from './dynoExecRequest';
 export * from './dynoExecResponse';
 export * from './errorResponse';
 export * from './execOutput';
+export * from './formationBatchUpdateRequest';
+export * from './formationUpdate';
 export * from './meResponse';
 export * from './namespace';
 export * from './namespaceActor';
@@ -67,7 +73,11 @@ import { AddonAttachment } from './addonAttachment';
 import { AddonBilledPrice } from './addonBilledPrice';
 import { AddonInfoAttachment } from './addonInfoAttachment';
 import { AddonPlan } from './addonPlan';
+import { AddonPlanCatalogItem } from './addonPlanCatalogItem';
+import { AddonPlanPrice } from './addonPlanPrice';
 import { AddonService } from './addonService';
+import { AddonServiceCatalogItem } from './addonServiceCatalogItem';
+import { AddonServiceCategory } from './addonServiceCategory';
 import { AddonWithAttachments } from './addonWithAttachments';
 import { App } from './app';
 import { AppBuildpack } from './appBuildpack';
@@ -93,6 +103,8 @@ import { DynoExecRequest } from './dynoExecRequest';
 import { DynoExecResponse } from './dynoExecResponse';
 import { ErrorResponse } from './errorResponse';
 import { ExecOutput } from './execOutput';
+import { FormationBatchUpdateRequest } from './formationBatchUpdateRequest';
+import { FormationUpdate } from './formationUpdate';
 import { MeResponse } from './meResponse';
 import { Namespace } from './namespace';
 import { NamespaceActor } from './namespaceActor';
@@ -138,7 +150,11 @@ let typeMap: {[index: string]: any} = {
     "AddonBilledPrice": AddonBilledPrice,
     "AddonInfoAttachment": AddonInfoAttachment,
     "AddonPlan": AddonPlan,
+    "AddonPlanCatalogItem": AddonPlanCatalogItem,
+    "AddonPlanPrice": AddonPlanPrice,
     "AddonService": AddonService,
+    "AddonServiceCatalogItem": AddonServiceCatalogItem,
+    "AddonServiceCategory": AddonServiceCategory,
     "AddonWithAttachments": AddonWithAttachments,
     "App": App,
     "AppBuildpack": AppBuildpack,
@@ -164,6 +180,8 @@ let typeMap: {[index: string]: any} = {
     "DynoExecResponse": DynoExecResponse,
     "ErrorResponse": ErrorResponse,
     "ExecOutput": ExecOutput,
+    "FormationBatchUpdateRequest": FormationBatchUpdateRequest,
+    "FormationUpdate": FormationUpdate,
     "MeResponse": MeResponse,
     "Namespace": Namespace,
     "NamespaceActor": NamespaceActor,

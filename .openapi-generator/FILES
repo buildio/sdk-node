@@ -1,11 +1,13 @@
 .gitignore
 api.ts
 api/addonAttachmentsApi.ts
+api/addonServicesApi.ts
 api/addonsApi.ts
 api/apis.ts
 api/collaboratorsApi.ts
 api/defaultApi.ts
 api/domainsApi.ts
+api/formationApi.ts
 api/pipelinesApi.ts
 git_push.sh
 model/addon.ts
@@ -14,7 +16,11 @@ model/addonAttachment.ts
 model/addonBilledPrice.ts
 model/addonInfoAttachment.ts
 model/addonPlan.ts
+model/addonPlanCatalogItem.ts
+model/addonPlanPrice.ts
 model/addonService.ts
+model/addonServiceCatalogItem.ts
+model/addonServiceCategory.ts
 model/addonWithAttachments.ts
 model/app.ts
 model/appBuildpack.ts
@@ -40,6 +46,8 @@ model/dynoExecRequest.ts
 model/dynoExecResponse.ts
 model/errorResponse.ts
 model/execOutput.ts
+model/formationBatchUpdateRequest.ts
+model/formationUpdate.ts
 model/meResponse.ts
 model/models.ts
 model/namespace.ts

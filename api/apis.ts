@@ -1,5 +1,7 @@
 export * from './addonAttachmentsApi';
 import { AddonAttachmentsApi } from './addonAttachmentsApi';
+export * from './addonServicesApi';
+import { AddonServicesApi } from './addonServicesApi';
 export * from './addonsApi';
 import { AddonsApi } from './addonsApi';
 export * from './collaboratorsApi';
@@ -8,6 +10,8 @@ export * from './defaultApi';
 import { DefaultApi } from './defaultApi';
 export * from './domainsApi';
 import { DomainsApi } from './domainsApi';
+export * from './formationApi';
+import { FormationApi } from './formationApi';
 export * from './pipelinesApi';
 import { PipelinesApi } from './pipelinesApi';
 import * as http from 'http';
@@ -21,4 +25,4 @@ export class HttpError extends Error {
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [AddonAttachmentsApi, AddonsApi, CollaboratorsApi, DefaultApi, DomainsApi, PipelinesApi];
+export const APIS = [AddonAttachmentsApi, AddonServicesApi, AddonsApi, CollaboratorsApi, DefaultApi, DomainsApi, FormationApi, PipelinesApi];
