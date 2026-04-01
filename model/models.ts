@@ -28,6 +28,9 @@ export * from './createBuildRequest';
 export * from './createDomainRequest';
 export * from './createNamespace410Response';
 export * from './createNamespaceRequest';
+export * from './createPipelinePromotionRequest';
+export * from './createPipelinePromotionRequestSource';
+export * from './createPipelinePromotionRequestTargetsInner';
 export * from './domain';
 export * from './domainApp';
 export * from './domainSniEndpoint';
@@ -47,8 +50,15 @@ export * from './oidcLoginResponseSpec';
 export * from './oidcLoginResponseStatus';
 export * from './pipeline';
 export * from './pipelineEnvironmentsInner';
+export * from './pipelinePromotion';
 export * from './pipelineTeam';
 export * from './process';
+export * from './promotionPipeline';
+export * from './promotionSource';
+export * from './promotionSourceApp';
+export * from './promotionTarget';
+export * from './promotionTargetApp';
+export * from './promotionTargetPromotion';
 export * from './team';
 export * from './updateAppRequest';
 export * from './updateDomainRequest';
@@ -95,6 +105,9 @@ import { CreateBuildRequest } from './createBuildRequest';
 import { CreateDomainRequest } from './createDomainRequest';
 import { CreateNamespace410Response } from './createNamespace410Response';
 import { CreateNamespaceRequest } from './createNamespaceRequest';
+import { CreatePipelinePromotionRequest } from './createPipelinePromotionRequest';
+import { CreatePipelinePromotionRequestSource } from './createPipelinePromotionRequestSource';
+import { CreatePipelinePromotionRequestTargetsInner } from './createPipelinePromotionRequestTargetsInner';
 import { Domain } from './domain';
 import { DomainApp } from './domainApp';
 import { DomainSniEndpoint } from './domainSniEndpoint';
@@ -114,8 +127,15 @@ import { OidcLoginResponseSpec } from './oidcLoginResponseSpec';
 import { OidcLoginResponseStatus } from './oidcLoginResponseStatus';
 import { Pipeline } from './pipeline';
 import { PipelineEnvironmentsInner } from './pipelineEnvironmentsInner';
+import { PipelinePromotion } from './pipelinePromotion';
 import { PipelineTeam } from './pipelineTeam';
 import { Process } from './process';
+import { PromotionPipeline } from './promotionPipeline';
+import { PromotionSource } from './promotionSource';
+import { PromotionSourceApp } from './promotionSourceApp';
+import { PromotionTarget } from './promotionTarget';
+import { PromotionTargetApp } from './promotionTargetApp';
+import { PromotionTargetPromotion } from './promotionTargetPromotion';
 import { Team } from './team';
 import { UpdateAppRequest } from './updateAppRequest';
 import { UpdateDomainRequest } from './updateDomainRequest';
@@ -141,6 +161,8 @@ let enumsMap: {[index: string]: any} = {
         "Domain.KindEnum": Domain.KindEnum,
         "Domain.StatusEnum": Domain.StatusEnum,
         "PipelineEnvironmentsInner.KindEnum": PipelineEnvironmentsInner.KindEnum,
+        "PipelinePromotion.StatusEnum": PipelinePromotion.StatusEnum,
+        "PromotionTarget.StatusEnum": PromotionTarget.StatusEnum,
 }
 
 let typeMap: {[index: string]: any} = {
@@ -172,6 +194,9 @@ let typeMap: {[index: string]: any} = {
     "CreateDomainRequest": CreateDomainRequest,
     "CreateNamespace410Response": CreateNamespace410Response,
     "CreateNamespaceRequest": CreateNamespaceRequest,
+    "CreatePipelinePromotionRequest": CreatePipelinePromotionRequest,
+    "CreatePipelinePromotionRequestSource": CreatePipelinePromotionRequestSource,
+    "CreatePipelinePromotionRequestTargetsInner": CreatePipelinePromotionRequestTargetsInner,
     "Domain": Domain,
     "DomainApp": DomainApp,
     "DomainSniEndpoint": DomainSniEndpoint,
@@ -191,8 +216,15 @@ let typeMap: {[index: string]: any} = {
     "OidcLoginResponseStatus": OidcLoginResponseStatus,
     "Pipeline": Pipeline,
     "PipelineEnvironmentsInner": PipelineEnvironmentsInner,
+    "PipelinePromotion": PipelinePromotion,
     "PipelineTeam": PipelineTeam,
     "Process": Process,
+    "PromotionPipeline": PromotionPipeline,
+    "PromotionSource": PromotionSource,
+    "PromotionSourceApp": PromotionSourceApp,
+    "PromotionTarget": PromotionTarget,
+    "PromotionTargetApp": PromotionTargetApp,
+    "PromotionTargetPromotion": PromotionTargetPromotion,
     "Team": Team,
     "UpdateAppRequest": UpdateAppRequest,
     "UpdateDomainRequest": UpdateDomainRequest,

@@ -8,6 +8,7 @@ api/collaboratorsApi.ts
 api/defaultApi.ts
 api/domainsApi.ts
 api/formationApi.ts
+api/pipelinePromotionsApi.ts
 api/pipelinesApi.ts
 git_push.sh
 model/addon.ts
@@ -38,6 +39,9 @@ model/createBuildRequest.ts
 model/createDomainRequest.ts
 model/createNamespace410Response.ts
 model/createNamespaceRequest.ts
+model/createPipelinePromotionRequest.ts
+model/createPipelinePromotionRequestSource.ts
+model/createPipelinePromotionRequestTargetsInner.ts
 model/domain.ts
 model/domainApp.ts
 model/domainSniEndpoint.ts
@@ -58,8 +62,15 @@ model/oidcLoginResponseSpec.ts
 model/oidcLoginResponseStatus.ts
 model/pipeline.ts
 model/pipelineEnvironmentsInner.ts
+model/pipelinePromotion.ts
 model/pipelineTeam.ts
 model/process.ts
+model/promotionPipeline.ts
+model/promotionSource.ts
+model/promotionSourceApp.ts
+model/promotionTarget.ts
+model/promotionTargetApp.ts
+model/promotionTargetPromotion.ts
 model/team.ts
 model/updateAppRequest.ts
 model/updateDomainRequest.ts
