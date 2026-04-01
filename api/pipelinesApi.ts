@@ -17,6 +17,7 @@ import http from 'http';
 /* tslint:disable:no-unused-locals */
 import { App } from '../model/app';
 import { ErrorResponse } from '../model/errorResponse';
+import { GetPipelineDiff200Response } from '../model/getPipelineDiff200Response';
 import { Pipeline } from '../model/pipeline';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
@@ -164,6 +165,88 @@ export class PipelinesApi {
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
                             body = ObjectSerializer.deserialize(body, "Pipeline");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * Compares the source app current commit to each downstream app via GitHub compare API.
+     * @summary compare source app commits to downstream apps
+     * @param pipelineIdOrName Pipeline ID or Name
+     * @param sourceApp Source app ID or name
+     */
+    public async getPipelineDiff (pipelineIdOrName: string, sourceApp: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GetPipelineDiff200Response;  }> {
+        const localVarPath = this.basePath + '/api/v1/pipelines/{pipeline_id_or_name}/diff'
+            .replace('{' + 'pipeline_id_or_name' + '}', encodeURIComponent(String(pipelineIdOrName)));
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        // verify required parameter 'pipelineIdOrName' is not null or undefined
+        if (pipelineIdOrName === null || pipelineIdOrName === undefined) {
+            throw new Error('Required parameter pipelineIdOrName was null or undefined when calling getPipelineDiff.');
+        }
+
+        // verify required parameter 'sourceApp' is not null or undefined
+        if (sourceApp === null || sourceApp === undefined) {
+            throw new Error('Required parameter sourceApp was null or undefined when calling getPipelineDiff.');
+        }
+
+        if (sourceApp !== undefined) {
+            localVarQueryParameters['source_app'] = ObjectSerializer.serialize(sourceApp, "string");
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications.bearer.accessToken) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications.bearer.applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: GetPipelineDiff200Response;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "GetPipelineDiff200Response");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

@@ -41,6 +41,10 @@ export * from './errorResponse';
 export * from './execOutput';
 export * from './formationBatchUpdateRequest';
 export * from './formationUpdate';
+export * from './getPipelineDiff200Response';
+export * from './getPipelineDiff200ResponseDiffsInner';
+export * from './getPipelineDiff200ResponseDiffsInnerCommitsInner';
+export * from './getPipelineDiff200ResponseSource';
 export * from './meResponse';
 export * from './namespace';
 export * from './namespaceActor';
@@ -118,6 +122,10 @@ import { ErrorResponse } from './errorResponse';
 import { ExecOutput } from './execOutput';
 import { FormationBatchUpdateRequest } from './formationBatchUpdateRequest';
 import { FormationUpdate } from './formationUpdate';
+import { GetPipelineDiff200Response } from './getPipelineDiff200Response';
+import { GetPipelineDiff200ResponseDiffsInner } from './getPipelineDiff200ResponseDiffsInner';
+import { GetPipelineDiff200ResponseDiffsInnerCommitsInner } from './getPipelineDiff200ResponseDiffsInnerCommitsInner';
+import { GetPipelineDiff200ResponseSource } from './getPipelineDiff200ResponseSource';
 import { MeResponse } from './meResponse';
 import { Namespace } from './namespace';
 import { NamespaceActor } from './namespaceActor';
@@ -160,6 +168,7 @@ let enumsMap: {[index: string]: any} = {
         "AddonWithAttachments.StateEnum": AddonWithAttachments.StateEnum,
         "Domain.KindEnum": Domain.KindEnum,
         "Domain.StatusEnum": Domain.StatusEnum,
+        "GetPipelineDiff200ResponseDiffsInner.StatusEnum": GetPipelineDiff200ResponseDiffsInner.StatusEnum,
         "PipelineEnvironmentsInner.KindEnum": PipelineEnvironmentsInner.KindEnum,
         "PipelinePromotion.StatusEnum": PipelinePromotion.StatusEnum,
         "PromotionTarget.StatusEnum": PromotionTarget.StatusEnum,
@@ -207,6 +216,10 @@ let typeMap: {[index: string]: any} = {
     "ExecOutput": ExecOutput,
     "FormationBatchUpdateRequest": FormationBatchUpdateRequest,
     "FormationUpdate": FormationUpdate,
+    "GetPipelineDiff200Response": GetPipelineDiff200Response,
+    "GetPipelineDiff200ResponseDiffsInner": GetPipelineDiff200ResponseDiffsInner,
+    "GetPipelineDiff200ResponseDiffsInnerCommitsInner": GetPipelineDiff200ResponseDiffsInnerCommitsInner,
+    "GetPipelineDiff200ResponseSource": GetPipelineDiff200ResponseSource,
     "MeResponse": MeResponse,
     "Namespace": Namespace,
     "NamespaceActor": NamespaceActor,

@@ -52,6 +52,10 @@ model/errorResponse.ts
 model/execOutput.ts
 model/formationBatchUpdateRequest.ts
 model/formationUpdate.ts
+model/getPipelineDiff200Response.ts
+model/getPipelineDiff200ResponseDiffsInner.ts
+model/getPipelineDiff200ResponseDiffsInnerCommitsInner.ts
+model/getPipelineDiff200ResponseSource.ts
 model/meResponse.ts
 model/models.ts
 model/namespace.ts
