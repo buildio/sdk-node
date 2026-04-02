@@ -18,6 +18,8 @@ export * from './appFormationValue';
 export * from './appPipeline';
 export * from './appTeam';
 export * from './attachmentAddon';
+export * from './buildpackInstallation';
+export * from './buildpackInstallationBuildpack';
 export * from './collaborator';
 export * from './collaboratorApp';
 export * from './collaboratorUser';
@@ -65,6 +67,8 @@ export * from './promotionTargetApp';
 export * from './promotionTargetPromotion';
 export * from './team';
 export * from './updateAppRequest';
+export * from './updateBuildpacksRequest';
+export * from './updateBuildpacksRequestUpdatesInner';
 export * from './updateDomainRequest';
 export * from './validationErrors';
 
@@ -99,6 +103,8 @@ import { AppFormationValue } from './appFormationValue';
 import { AppPipeline } from './appPipeline';
 import { AppTeam } from './appTeam';
 import { AttachmentAddon } from './attachmentAddon';
+import { BuildpackInstallation } from './buildpackInstallation';
+import { BuildpackInstallationBuildpack } from './buildpackInstallationBuildpack';
 import { Collaborator } from './collaborator';
 import { CollaboratorApp } from './collaboratorApp';
 import { CollaboratorUser } from './collaboratorUser';
@@ -146,6 +152,8 @@ import { PromotionTargetApp } from './promotionTargetApp';
 import { PromotionTargetPromotion } from './promotionTargetPromotion';
 import { Team } from './team';
 import { UpdateAppRequest } from './updateAppRequest';
+import { UpdateBuildpacksRequest } from './updateBuildpacksRequest';
+import { UpdateBuildpacksRequestUpdatesInner } from './updateBuildpacksRequestUpdatesInner';
 import { UpdateDomainRequest } from './updateDomainRequest';
 import { ValidationErrors } from './validationErrors';
 
@@ -193,6 +201,8 @@ let typeMap: {[index: string]: any} = {
     "AppPipeline": AppPipeline,
     "AppTeam": AppTeam,
     "AttachmentAddon": AttachmentAddon,
+    "BuildpackInstallation": BuildpackInstallation,
+    "BuildpackInstallationBuildpack": BuildpackInstallationBuildpack,
     "Collaborator": Collaborator,
     "CollaboratorApp": CollaboratorApp,
     "CollaboratorUser": CollaboratorUser,
@@ -240,6 +250,8 @@ let typeMap: {[index: string]: any} = {
     "PromotionTargetPromotion": PromotionTargetPromotion,
     "Team": Team,
     "UpdateAppRequest": UpdateAppRequest,
+    "UpdateBuildpacksRequest": UpdateBuildpacksRequest,
+    "UpdateBuildpacksRequestUpdatesInner": UpdateBuildpacksRequestUpdatesInner,
     "UpdateDomainRequest": UpdateDomainRequest,
     "ValidationErrors": ValidationErrors,
 }

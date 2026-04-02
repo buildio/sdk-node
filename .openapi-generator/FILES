@@ -4,6 +4,7 @@ api/addonAttachmentsApi.ts
 api/addonServicesApi.ts
 api/addonsApi.ts
 api/apis.ts
+api/buildpacksApi.ts
 api/collaboratorsApi.ts
 api/defaultApi.ts
 api/domainsApi.ts
@@ -29,6 +30,8 @@ model/appFormationValue.ts
 model/appPipeline.ts
 model/appTeam.ts
 model/attachmentAddon.ts
+model/buildpackInstallation.ts
+model/buildpackInstallationBuildpack.ts
 model/collaborator.ts
 model/collaboratorApp.ts
 model/collaboratorUser.ts
@@ -77,5 +80,7 @@ model/promotionTargetApp.ts
 model/promotionTargetPromotion.ts
 model/team.ts
 model/updateAppRequest.ts
+model/updateBuildpacksRequest.ts
+model/updateBuildpacksRequestUpdatesInner.ts
 model/updateDomainRequest.ts
 model/validationErrors.ts
