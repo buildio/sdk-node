@@ -55,6 +55,10 @@ export class App {
     */
     'webUrl'?: string;
     /**
+    * Git push URL for deploying via git push
+    */
+    'gitUrl'?: string;
+    /**
     * GitHub branch for the application
     */
     'branch'?: string | null;
@@ -209,6 +213,11 @@ export class App {
         {
             "name": "webUrl",
             "baseName": "web_url",
+            "type": "string"
+        },
+        {
+            "name": "gitUrl",
+            "baseName": "git_url",
             "type": "string"
         },
         {
