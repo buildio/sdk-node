@@ -12,8 +12,9 @@
 
 import { RequestFile } from './models';
 
-export class PromotionTargetPromotion {
-    'id'?: string;
+export class MeApp {
+    'id': string;
+    'name': string;
 
     static discriminator: string | undefined = undefined;
 
@@ -22,10 +23,15 @@ export class PromotionTargetPromotion {
             "name": "id",
             "baseName": "id",
             "type": "string"
+        },
+        {
+            "name": "name",
+            "baseName": "name",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return PromotionTargetPromotion.attributeTypeMap;
+        return MeApp.attributeTypeMap;
     }
 }
 

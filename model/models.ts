@@ -15,6 +15,7 @@ export * from './addonWithAttachments';
 export * from './app';
 export * from './appBuildpack';
 export * from './appFormationValue';
+export * from './appMeResponse';
 export * from './appPipeline';
 export * from './appTeam';
 export * from './attachmentAddon';
@@ -26,7 +27,6 @@ export * from './collaboratorUser';
 export * from './createAddonAttachmentRequest';
 export * from './createAddonRequest';
 export * from './createAppRequest';
-export * from './createBuildRequest';
 export * from './createDomainRequest';
 export * from './createNamespace410Response';
 export * from './createNamespaceRequest';
@@ -47,7 +47,7 @@ export * from './getPipelineDiff200Response';
 export * from './getPipelineDiff200ResponseDiffsInner';
 export * from './getPipelineDiff200ResponseDiffsInnerCommitsInner';
 export * from './getPipelineDiff200ResponseSource';
-export * from './meResponse';
+export * from './meApp';
 export * from './namespace';
 export * from './namespaceActor';
 export * from './namespaceTeam';
@@ -100,6 +100,7 @@ import { AddonWithAttachments } from './addonWithAttachments';
 import { App } from './app';
 import { AppBuildpack } from './appBuildpack';
 import { AppFormationValue } from './appFormationValue';
+import { AppMeResponse } from './appMeResponse';
 import { AppPipeline } from './appPipeline';
 import { AppTeam } from './appTeam';
 import { AttachmentAddon } from './attachmentAddon';
@@ -111,7 +112,6 @@ import { CollaboratorUser } from './collaboratorUser';
 import { CreateAddonAttachmentRequest } from './createAddonAttachmentRequest';
 import { CreateAddonRequest } from './createAddonRequest';
 import { CreateAppRequest } from './createAppRequest';
-import { CreateBuildRequest } from './createBuildRequest';
 import { CreateDomainRequest } from './createDomainRequest';
 import { CreateNamespace410Response } from './createNamespace410Response';
 import { CreateNamespaceRequest } from './createNamespaceRequest';
@@ -132,7 +132,7 @@ import { GetPipelineDiff200Response } from './getPipelineDiff200Response';
 import { GetPipelineDiff200ResponseDiffsInner } from './getPipelineDiff200ResponseDiffsInner';
 import { GetPipelineDiff200ResponseDiffsInnerCommitsInner } from './getPipelineDiff200ResponseDiffsInnerCommitsInner';
 import { GetPipelineDiff200ResponseSource } from './getPipelineDiff200ResponseSource';
-import { MeResponse } from './meResponse';
+import { MeApp } from './meApp';
 import { Namespace } from './namespace';
 import { NamespaceActor } from './namespaceActor';
 import { NamespaceTeam } from './namespaceTeam';
@@ -198,6 +198,7 @@ let typeMap: {[index: string]: any} = {
     "App": App,
     "AppBuildpack": AppBuildpack,
     "AppFormationValue": AppFormationValue,
+    "AppMeResponse": AppMeResponse,
     "AppPipeline": AppPipeline,
     "AppTeam": AppTeam,
     "AttachmentAddon": AttachmentAddon,
@@ -209,7 +210,6 @@ let typeMap: {[index: string]: any} = {
     "CreateAddonAttachmentRequest": CreateAddonAttachmentRequest,
     "CreateAddonRequest": CreateAddonRequest,
     "CreateAppRequest": CreateAppRequest,
-    "CreateBuildRequest": CreateBuildRequest,
     "CreateDomainRequest": CreateDomainRequest,
     "CreateNamespace410Response": CreateNamespace410Response,
     "CreateNamespaceRequest": CreateNamespaceRequest,
@@ -230,7 +230,7 @@ let typeMap: {[index: string]: any} = {
     "GetPipelineDiff200ResponseDiffsInner": GetPipelineDiff200ResponseDiffsInner,
     "GetPipelineDiff200ResponseDiffsInnerCommitsInner": GetPipelineDiff200ResponseDiffsInnerCommitsInner,
     "GetPipelineDiff200ResponseSource": GetPipelineDiff200ResponseSource,
-    "MeResponse": MeResponse,
+    "MeApp": MeApp,
     "Namespace": Namespace,
     "NamespaceActor": NamespaceActor,
     "NamespaceTeam": NamespaceTeam,

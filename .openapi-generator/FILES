@@ -27,6 +27,7 @@ model/addonWithAttachments.ts
 model/app.ts
 model/appBuildpack.ts
 model/appFormationValue.ts
+model/appMeResponse.ts
 model/appPipeline.ts
 model/appTeam.ts
 model/attachmentAddon.ts
@@ -38,7 +39,6 @@ model/collaboratorUser.ts
 model/createAddonAttachmentRequest.ts
 model/createAddonRequest.ts
 model/createAppRequest.ts
-model/createBuildRequest.ts
 model/createDomainRequest.ts
 model/createNamespace410Response.ts
 model/createNamespaceRequest.ts
@@ -59,7 +59,7 @@ model/getPipelineDiff200Response.ts
 model/getPipelineDiff200ResponseDiffsInner.ts
 model/getPipelineDiff200ResponseDiffsInnerCommitsInner.ts
 model/getPipelineDiff200ResponseSource.ts
-model/meResponse.ts
+model/meApp.ts
 model/models.ts
 model/namespace.ts
 model/namespaceActor.ts

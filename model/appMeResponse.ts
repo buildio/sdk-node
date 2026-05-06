@@ -11,21 +11,31 @@
  */
 
 import { RequestFile } from './models';
+import { MeApp } from './meApp';
 
-export class PromotionTargetPromotion {
-    'id'?: string;
+export class AppMeResponse {
+    /**
+    * Email of the user who minted the token
+    */
+    'email'?: string | null;
+    'app': MeApp;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "id",
-            "baseName": "id",
+            "name": "email",
+            "baseName": "email",
             "type": "string"
+        },
+        {
+            "name": "app",
+            "baseName": "app",
+            "type": "MeApp"
         }    ];
 
     static getAttributeTypeMap() {
-        return PromotionTargetPromotion.attributeTypeMap;
+        return AppMeResponse.attributeTypeMap;
     }
 }
 
