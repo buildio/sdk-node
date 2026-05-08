@@ -23,6 +23,8 @@ import { CreateNamespaceRequest } from '../model/createNamespaceRequest';
 import { Dyno } from '../model/dyno';
 import { DynoExecRequest } from '../model/dynoExecRequest';
 import { DynoExecResponse } from '../model/dynoExecResponse';
+import { DynoRunRequest } from '../model/dynoRunRequest';
+import { DynoRunResponse } from '../model/dynoRunResponse';
 import { ErrorResponse } from '../model/errorResponse';
 import { Namespace } from '../model/namespace';
 import { OidcLoginResponse } from '../model/oidcLoginResponse';
@@ -1415,6 +1417,88 @@ export class DefaultApi {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * 
+     * @summary run one-off command
+     * @param appIdOrName app id or name
+     * @param dynoRunRequest 
+     */
+    public async runDyno (appIdOrName: string, dynoRunRequest: DynoRunRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DynoRunResponse;  }> {
+        const localVarPath = this.basePath + '/api/v1/apps/{app_id_or_name}/dynos/run'
+            .replace('{' + 'app_id_or_name' + '}', encodeURIComponent(String(appIdOrName)));
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        // verify required parameter 'appIdOrName' is not null or undefined
+        if (appIdOrName === null || appIdOrName === undefined) {
+            throw new Error('Required parameter appIdOrName was null or undefined when calling runDyno.');
+        }
+
+        // verify required parameter 'dynoRunRequest' is not null or undefined
+        if (dynoRunRequest === null || dynoRunRequest === undefined) {
+            throw new Error('Required parameter dynoRunRequest was null or undefined when calling runDyno.');
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'POST',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+            body: ObjectSerializer.serialize(dynoRunRequest, "DynoRunRequest")
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications.bearer.accessToken) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications.bearer.applyToRequest(localVarRequestOptions));
+        }
+        if (this.authentications.oauth2.accessToken) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications.oauth2.applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: DynoRunResponse;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "DynoRunResponse");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

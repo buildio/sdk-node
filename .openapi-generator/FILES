@@ -51,6 +51,8 @@ model/domainSniEndpoint.ts
 model/dyno.ts
 model/dynoExecRequest.ts
 model/dynoExecResponse.ts
+model/dynoRunRequest.ts
+model/dynoRunResponse.ts
 model/errorResponse.ts
 model/execOutput.ts
 model/formationBatchUpdateRequest.ts

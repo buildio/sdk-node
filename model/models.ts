@@ -39,6 +39,8 @@ export * from './domainSniEndpoint';
 export * from './dyno';
 export * from './dynoExecRequest';
 export * from './dynoExecResponse';
+export * from './dynoRunRequest';
+export * from './dynoRunResponse';
 export * from './errorResponse';
 export * from './execOutput';
 export * from './formationBatchUpdateRequest';
@@ -124,6 +126,8 @@ import { DomainSniEndpoint } from './domainSniEndpoint';
 import { Dyno } from './dyno';
 import { DynoExecRequest } from './dynoExecRequest';
 import { DynoExecResponse } from './dynoExecResponse';
+import { DynoRunRequest } from './dynoRunRequest';
+import { DynoRunResponse } from './dynoRunResponse';
 import { ErrorResponse } from './errorResponse';
 import { ExecOutput } from './execOutput';
 import { FormationBatchUpdateRequest } from './formationBatchUpdateRequest';
@@ -222,6 +226,8 @@ let typeMap: {[index: string]: any} = {
     "Dyno": Dyno,
     "DynoExecRequest": DynoExecRequest,
     "DynoExecResponse": DynoExecResponse,
+    "DynoRunRequest": DynoRunRequest,
+    "DynoRunResponse": DynoRunResponse,
     "ErrorResponse": ErrorResponse,
     "ExecOutput": ExecOutput,
     "FormationBatchUpdateRequest": FormationBatchUpdateRequest,
