@@ -17,8 +17,8 @@ export class AppMeResponse {
     /**
     * Email of the user who minted the token
     */
-    'email'?: string | null;
-    'app': MeApp;
+    'email': string | null;
+    'app'?: MeApp;
 
     static discriminator: string | undefined = undefined;
 
