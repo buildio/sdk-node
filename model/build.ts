@@ -11,6 +11,8 @@
  */
 
 import { RequestFile } from './models';
+import { BuildBuildpacksInner } from './buildBuildpacksInner';
+import { BuildSlug } from './buildSlug';
 import { BuildSourceBlob } from './buildSourceBlob';
 import { BuildUser } from './buildUser';
 import { GetPipelineDiff200ResponseSource } from './getPipelineDiff200ResponseSource';
@@ -20,14 +22,14 @@ export class Build {
     'app': GetPipelineDiff200ResponseSource;
     'user'?: BuildUser;
     'sourceBlob'?: BuildSourceBlob;
-    'buildpacks'?: Array<object> | null;
+    'buildpacks'?: Array<BuildBuildpacksInner> | null;
     'stack': string | null;
     /**
     * Build state, reported verbatim rather than collapsed.
     */
     'state': Build.StateEnum;
     'outputStreamUrl'?: string | null;
-    'slug'?: object | null;
+    'slug'?: BuildSlug | null;
     'createdAt': Date;
     'updatedAt': Date;
 
@@ -57,7 +59,7 @@ export class Build {
         {
             "name": "buildpacks",
             "baseName": "buildpacks",
-            "type": "Array<object>"
+            "type": "Array<BuildBuildpacksInner>"
         },
         {
             "name": "stack",
@@ -77,7 +79,7 @@ export class Build {
         {
             "name": "slug",
             "baseName": "slug",
-            "type": "object"
+            "type": "BuildSlug"
         },
         {
             "name": "createdAt",

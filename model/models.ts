@@ -20,6 +20,8 @@ export * from './appPipeline';
 export * from './appTeam';
 export * from './attachmentAddon';
 export * from './build';
+export * from './buildBuildpacksInner';
+export * from './buildSlug';
 export * from './buildSourceBlob';
 export * from './buildUser';
 export * from './buildpackInstallation';
@@ -112,6 +114,8 @@ import { AppPipeline } from './appPipeline';
 import { AppTeam } from './appTeam';
 import { AttachmentAddon } from './attachmentAddon';
 import { Build } from './build';
+import { BuildBuildpacksInner } from './buildBuildpacksInner';
+import { BuildSlug } from './buildSlug';
 import { BuildSourceBlob } from './buildSourceBlob';
 import { BuildUser } from './buildUser';
 import { BuildpackInstallation } from './buildpackInstallation';
@@ -219,6 +223,8 @@ let typeMap: {[index: string]: any} = {
     "AppTeam": AppTeam,
     "AttachmentAddon": AttachmentAddon,
     "Build": Build,
+    "BuildBuildpacksInner": BuildBuildpacksInner,
+    "BuildSlug": BuildSlug,
     "BuildSourceBlob": BuildSourceBlob,
     "BuildUser": BuildUser,
     "BuildpackInstallation": BuildpackInstallation,

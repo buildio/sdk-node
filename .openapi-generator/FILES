@@ -32,6 +32,8 @@ model/appPipeline.ts
 model/appTeam.ts
 model/attachmentAddon.ts
 model/build.ts
+model/buildBuildpacksInner.ts
+model/buildSlug.ts
 model/buildSourceBlob.ts
 model/buildUser.ts
 model/buildpackInstallation.ts
