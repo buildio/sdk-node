@@ -19,6 +19,9 @@ export * from './appMeResponse';
 export * from './appPipeline';
 export * from './appTeam';
 export * from './attachmentAddon';
+export * from './build';
+export * from './buildSourceBlob';
+export * from './buildUser';
 export * from './buildpackInstallation';
 export * from './buildpackInstallationBuildpack';
 export * from './collaborator';
@@ -33,6 +36,8 @@ export * from './createNamespaceRequest';
 export * from './createPipelinePromotionRequest';
 export * from './createPipelinePromotionRequestSource';
 export * from './createPipelinePromotionRequestTargetsInner';
+export * from './deployment';
+export * from './deploymentBuild';
 export * from './domain';
 export * from './domainApp';
 export * from './domainSniEndpoint';
@@ -106,6 +111,9 @@ import { AppMeResponse } from './appMeResponse';
 import { AppPipeline } from './appPipeline';
 import { AppTeam } from './appTeam';
 import { AttachmentAddon } from './attachmentAddon';
+import { Build } from './build';
+import { BuildSourceBlob } from './buildSourceBlob';
+import { BuildUser } from './buildUser';
 import { BuildpackInstallation } from './buildpackInstallation';
 import { BuildpackInstallationBuildpack } from './buildpackInstallationBuildpack';
 import { Collaborator } from './collaborator';
@@ -120,6 +128,8 @@ import { CreateNamespaceRequest } from './createNamespaceRequest';
 import { CreatePipelinePromotionRequest } from './createPipelinePromotionRequest';
 import { CreatePipelinePromotionRequestSource } from './createPipelinePromotionRequestSource';
 import { CreatePipelinePromotionRequestTargetsInner } from './createPipelinePromotionRequestTargetsInner';
+import { Deployment } from './deployment';
+import { DeploymentBuild } from './deploymentBuild';
 import { Domain } from './domain';
 import { DomainApp } from './domainApp';
 import { DomainSniEndpoint } from './domainSniEndpoint';
@@ -178,6 +188,8 @@ let enumsMap: {[index: string]: any} = {
         "AddonAttachment.StateEnum": AddonAttachment.StateEnum,
         "AddonInfoAttachment.StateEnum": AddonInfoAttachment.StateEnum,
         "AddonWithAttachments.StateEnum": AddonWithAttachments.StateEnum,
+        "Build.StateEnum": Build.StateEnum,
+        "Deployment.StateEnum": Deployment.StateEnum,
         "Domain.KindEnum": Domain.KindEnum,
         "Domain.StatusEnum": Domain.StatusEnum,
         "GetPipelineDiff200ResponseDiffsInner.StatusEnum": GetPipelineDiff200ResponseDiffsInner.StatusEnum,
@@ -206,6 +218,9 @@ let typeMap: {[index: string]: any} = {
     "AppPipeline": AppPipeline,
     "AppTeam": AppTeam,
     "AttachmentAddon": AttachmentAddon,
+    "Build": Build,
+    "BuildSourceBlob": BuildSourceBlob,
+    "BuildUser": BuildUser,
     "BuildpackInstallation": BuildpackInstallation,
     "BuildpackInstallationBuildpack": BuildpackInstallationBuildpack,
     "Collaborator": Collaborator,
@@ -220,6 +235,8 @@ let typeMap: {[index: string]: any} = {
     "CreatePipelinePromotionRequest": CreatePipelinePromotionRequest,
     "CreatePipelinePromotionRequestSource": CreatePipelinePromotionRequestSource,
     "CreatePipelinePromotionRequestTargetsInner": CreatePipelinePromotionRequestTargetsInner,
+    "Deployment": Deployment,
+    "DeploymentBuild": DeploymentBuild,
     "Domain": Domain,
     "DomainApp": DomainApp,
     "DomainSniEndpoint": DomainSniEndpoint,

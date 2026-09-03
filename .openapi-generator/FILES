@@ -31,6 +31,9 @@ model/appMeResponse.ts
 model/appPipeline.ts
 model/appTeam.ts
 model/attachmentAddon.ts
+model/build.ts
+model/buildSourceBlob.ts
+model/buildUser.ts
 model/buildpackInstallation.ts
 model/buildpackInstallationBuildpack.ts
 model/collaborator.ts
@@ -45,6 +48,8 @@ model/createNamespaceRequest.ts
 model/createPipelinePromotionRequest.ts
 model/createPipelinePromotionRequestSource.ts
 model/createPipelinePromotionRequestTargetsInner.ts
+model/deployment.ts
+model/deploymentBuild.ts
 model/domain.ts
 model/domainApp.ts
 model/domainSniEndpoint.ts
