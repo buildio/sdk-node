@@ -329,9 +329,9 @@ export class PipelinesApi {
         });
     }
     /**
-     * Lists all pipelines accessible to the current user. Optionally filter by team.
+     * Lists pipelines for the current user. Defaults to personal team; pass team_id to select a different team.
      * @summary list pipelines
-     * @param teamId Filter pipelines by team ID or name
+     * @param teamId Team ID or name. Defaults to personal team (matching apps#index).
      */
     public async listPipelines (teamId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<Pipeline>;  }> {
         const localVarPath = this.basePath + '/api/v1/pipelines';
