@@ -18,10 +18,6 @@ export class CreateAddonRequest {
     */
     'plan': string;
     /**
-    * Globally unique addon name (optional)
-    */
-    'name'?: string | null;
-    /**
     * User-provided display name for the addon (optional)
     */
     'humanName'?: string | null;
@@ -40,11 +36,6 @@ export class CreateAddonRequest {
         {
             "name": "plan",
             "baseName": "plan",
-            "type": "string"
-        },
-        {
-            "name": "name",
-            "baseName": "name",
             "type": "string"
         },
         {
