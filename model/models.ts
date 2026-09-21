@@ -75,6 +75,8 @@ export * from './promotionTarget';
 export * from './promotionTargetApp';
 export * from './promotionTargetPromotion';
 export * from './team';
+export * from './transferAddonBillingRequest';
+export * from './transferAddonBillingRequestBillingEntity';
 export * from './updateAppRequest';
 export * from './updateBuildpacksRequest';
 export * from './updateBuildpacksRequestUpdatesInner';
@@ -169,6 +171,8 @@ import { PromotionTarget } from './promotionTarget';
 import { PromotionTargetApp } from './promotionTargetApp';
 import { PromotionTargetPromotion } from './promotionTargetPromotion';
 import { Team } from './team';
+import { TransferAddonBillingRequest } from './transferAddonBillingRequest';
+import { TransferAddonBillingRequestBillingEntity } from './transferAddonBillingRequestBillingEntity';
 import { UpdateAppRequest } from './updateAppRequest';
 import { UpdateBuildpacksRequest } from './updateBuildpacksRequest';
 import { UpdateBuildpacksRequestUpdatesInner } from './updateBuildpacksRequestUpdatesInner';
@@ -278,6 +282,8 @@ let typeMap: {[index: string]: any} = {
     "PromotionTargetApp": PromotionTargetApp,
     "PromotionTargetPromotion": PromotionTargetPromotion,
     "Team": Team,
+    "TransferAddonBillingRequest": TransferAddonBillingRequest,
+    "TransferAddonBillingRequestBillingEntity": TransferAddonBillingRequestBillingEntity,
     "UpdateAppRequest": UpdateAppRequest,
     "UpdateBuildpacksRequest": UpdateBuildpacksRequest,
     "UpdateBuildpacksRequestUpdatesInner": UpdateBuildpacksRequestUpdatesInner,

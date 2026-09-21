@@ -88,6 +88,8 @@ model/promotionTarget.ts
 model/promotionTargetApp.ts
 model/promotionTargetPromotion.ts
 model/team.ts
+model/transferAddonBillingRequest.ts
+model/transferAddonBillingRequestBillingEntity.ts
 model/updateAppRequest.ts
 model/updateBuildpacksRequest.ts
 model/updateBuildpacksRequestUpdatesInner.ts
