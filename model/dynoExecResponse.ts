@@ -14,6 +14,8 @@ import { RequestFile } from './models';
 
 export class DynoExecResponse {
     'output': string;
+    'stderr': string;
+    'exitCode': number;
 
     static discriminator: string | undefined = undefined;
 
@@ -22,6 +24,16 @@ export class DynoExecResponse {
             "name": "output",
             "baseName": "output",
             "type": "string"
+        },
+        {
+            "name": "stderr",
+            "baseName": "stderr",
+            "type": "string"
+        },
+        {
+            "name": "exitCode",
+            "baseName": "exit_code",
+            "type": "number"
         }    ];
 
     static getAttributeTypeMap() {
