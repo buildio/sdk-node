@@ -27,6 +27,7 @@ import { DynoExecRequest } from '../model/dynoExecRequest';
 import { DynoExecResponse } from '../model/dynoExecResponse';
 import { DynoRunRequest } from '../model/dynoRunRequest';
 import { DynoRunResponse } from '../model/dynoRunResponse';
+import { DynoRunTicketResponse } from '../model/dynoRunTicketResponse';
 import { ErrorResponse } from '../model/errorResponse';
 import { Namespace } from '../model/namespace';
 import { OidcLoginResponse } from '../model/oidcLoginResponse';

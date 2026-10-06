@@ -48,6 +48,7 @@ export * from './dynoExecRequest';
 export * from './dynoExecResponse';
 export * from './dynoRunRequest';
 export * from './dynoRunResponse';
+export * from './dynoRunTicketResponse';
 export * from './errorResponse';
 export * from './execOutput';
 export * from './formationBatchUpdateRequest';
@@ -144,6 +145,7 @@ import { DynoExecRequest } from './dynoExecRequest';
 import { DynoExecResponse } from './dynoExecResponse';
 import { DynoRunRequest } from './dynoRunRequest';
 import { DynoRunResponse } from './dynoRunResponse';
+import { DynoRunTicketResponse } from './dynoRunTicketResponse';
 import { ErrorResponse } from './errorResponse';
 import { ExecOutput } from './execOutput';
 import { FormationBatchUpdateRequest } from './formationBatchUpdateRequest';
@@ -255,6 +257,7 @@ let typeMap: {[index: string]: any} = {
     "DynoExecResponse": DynoExecResponse,
     "DynoRunRequest": DynoRunRequest,
     "DynoRunResponse": DynoRunResponse,
+    "DynoRunTicketResponse": DynoRunTicketResponse,
     "ErrorResponse": ErrorResponse,
     "ExecOutput": ExecOutput,
     "FormationBatchUpdateRequest": FormationBatchUpdateRequest,

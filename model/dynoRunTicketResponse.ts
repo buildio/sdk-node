@@ -12,59 +12,35 @@
 
 import { RequestFile } from './models';
 
-export class DynoRunRequest {
+export class DynoRunTicketResponse {
     /**
-    * Shell command to run (required unless attach is true)
+    * SSH password, valid for expires_in seconds
     */
-    'command'?: string;
-    /**
-    * Process type (default: worker)
-    */
-    'type'?: string;
-    /**
-    * Dyno size (default: from formation; with attach, like a Heroku one-off dyno)
-    */
-    'size'?: string;
-    /**
-    * Timeout in seconds (30–1800, default: 300)
-    */
-    'timeout'?: number;
-    /**
-    * Run no Job; return a short-lived ticket to use as the SSH password (bld run)
-    */
-    'attach'?: boolean;
+    'ticket': string;
+    'expiresIn': number;
+    'size': string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "command",
-            "baseName": "command",
+            "name": "ticket",
+            "baseName": "ticket",
             "type": "string"
         },
         {
-            "name": "type",
-            "baseName": "type",
-            "type": "string"
+            "name": "expiresIn",
+            "baseName": "expires_in",
+            "type": "number"
         },
         {
             "name": "size",
             "baseName": "size",
             "type": "string"
-        },
-        {
-            "name": "timeout",
-            "baseName": "timeout",
-            "type": "number"
-        },
-        {
-            "name": "attach",
-            "baseName": "attach",
-            "type": "boolean"
         }    ];
 
     static getAttributeTypeMap() {
-        return DynoRunRequest.attributeTypeMap;
+        return DynoRunTicketResponse.attributeTypeMap;
     }
 }
 
