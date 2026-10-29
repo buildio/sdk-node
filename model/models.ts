@@ -58,6 +58,7 @@ export * from './getPipelineDiff200ResponseDiffsInner';
 export * from './getPipelineDiff200ResponseDiffsInnerCommitsInner';
 export * from './getPipelineDiff200ResponseSource';
 export * from './meApp';
+export * from './meTeam';
 export * from './namespace';
 export * from './namespaceActor';
 export * from './namespaceTeam';
@@ -155,6 +156,7 @@ import { GetPipelineDiff200ResponseDiffsInner } from './getPipelineDiff200Respon
 import { GetPipelineDiff200ResponseDiffsInnerCommitsInner } from './getPipelineDiff200ResponseDiffsInnerCommitsInner';
 import { GetPipelineDiff200ResponseSource } from './getPipelineDiff200ResponseSource';
 import { MeApp } from './meApp';
+import { MeTeam } from './meTeam';
 import { Namespace } from './namespace';
 import { NamespaceActor } from './namespaceActor';
 import { NamespaceTeam } from './namespaceTeam';
@@ -267,6 +269,7 @@ let typeMap: {[index: string]: any} = {
     "GetPipelineDiff200ResponseDiffsInnerCommitsInner": GetPipelineDiff200ResponseDiffsInnerCommitsInner,
     "GetPipelineDiff200ResponseSource": GetPipelineDiff200ResponseSource,
     "MeApp": MeApp,
+    "MeTeam": MeTeam,
     "Namespace": Namespace,
     "NamespaceActor": NamespaceActor,
     "NamespaceTeam": NamespaceTeam,

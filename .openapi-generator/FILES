@@ -70,6 +70,7 @@ model/getPipelineDiff200ResponseDiffsInner.ts
 model/getPipelineDiff200ResponseDiffsInnerCommitsInner.ts
 model/getPipelineDiff200ResponseSource.ts
 model/meApp.ts
+model/meTeam.ts
 model/models.ts
 model/namespace.ts
 model/namespaceActor.ts
