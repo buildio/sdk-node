@@ -2039,6 +2039,148 @@ components:
             - is invalid
       required:
       - error
+    app:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        team:
+          type: object
+          title: AppTeam
+          properties:
+            id:
+              type: string
+              format: uuid
+            name:
+              type: string
+        pipeline:
+          type: object
+          title: AppPipeline
+          properties:
+            id:
+              type: string
+              format: uuid
+              nullable: true
+            name:
+              type: string
+              nullable: true
+          nullable: true
+        dns_refreshed_at:
+          type: string
+          format: date_time
+          nullable: true
+        builds_count:
+          type: integer
+        deployments_count:
+          type: integer
+        slugs_count:
+          type: integer
+        current_build_id:
+          type: string
+          format: uuid
+          nullable: true
+        current_image_id:
+          type: string
+          format: uuid
+          nullable: true
+        current_deployment_id:
+          type: string
+          format: uuid
+          nullable: true
+        formation:
+          type: object
+          additionalProperties:
+            type: object
+            title: AppFormationValue
+            properties:
+              size:
+                type: string
+              display:
+                type: string
+              quantity:
+                type: integer
+            example:
+              web:
+                size: basic
+                display: server start
+                quantity: 1
+            description: Dyno formation
+        build_stack:
+          type: string
+          description: 'Stack for the next build (Heroku: build_stack)'
+        stack:
+          type: string
+          description: 'Stack currently deployed (Heroku: stack)'
+        region:
+          type: string
+        buildpacks:
+          type: array
+          items:
+            type: object
+            title: AppBuildpack
+            properties:
+              url:
+                type: string
+        description:
+          type: string
+          nullable: true
+        pipeline_stage:
+          type: string
+          nullable: true
+        policy_allow_websockets:
+          type: boolean
+        policy_response_timeout:
+          type: integer
+        policy_max_connections:
+          type: integer
+        policy_erosion_resistance_seconds:
+          type: integer
+        policy_share_process_namespace:
+          type: boolean
+        policy_temporary_self_signed:
+          type: boolean
+        created_at:
+          type: string
+          format: date_time
+        updated_at:
+          type: string
+          format: date_time
+        deleted_at:
+          type: string
+          format: date_time
+          nullable: true
+        web_url:
+          type: string
+          description: Full HTTPS URL for the application
+        git_url:
+          type: string
+          description: Git push URL for deploying via git push
+        branch:
+          type: string
+          nullable: true
+          description: GitHub branch for the application
+        environment_id:
+          type: string
+          format: uuid
+        ssh_host:
+          type: string
+          description: SSH host for running one-off dynos
+          nullable: false
+        ssh_port:
+          type: integer
+          description: SSH port for running one-off dynos
+          nullable: false
+      required:
+      - id
+      - name
+      - team
+      - build_stack
+      - region
+      - ssh_host
+      - ssh_port
     addon_app:
       type: object
       properties:
@@ -2386,148 +2528,6 @@ components:
       - user
       - app
       - role
-    app:
-      type: object
-      properties:
-        id:
-          type: string
-          format: uuid
-        name:
-          type: string
-        team:
-          type: object
-          title: AppTeam
-          properties:
-            id:
-              type: string
-              format: uuid
-            name:
-              type: string
-        pipeline:
-          type: object
-          title: AppPipeline
-          properties:
-            id:
-              type: string
-              format: uuid
-              nullable: true
-            name:
-              type: string
-              nullable: true
-          nullable: true
-        dns_refreshed_at:
-          type: string
-          format: date_time
-          nullable: true
-        builds_count:
-          type: integer
-        deployments_count:
-          type: integer
-        slugs_count:
-          type: integer
-        current_build_id:
-          type: string
-          format: uuid
-          nullable: true
-        current_image_id:
-          type: string
-          format: uuid
-          nullable: true
-        current_deployment_id:
-          type: string
-          format: uuid
-          nullable: true
-        formation:
-          type: object
-          additionalProperties:
-            type: object
-            title: AppFormationValue
-            properties:
-              size:
-                type: string
-              display:
-                type: string
-              quantity:
-                type: integer
-            example:
-              web:
-                size: basic
-                display: server start
-                quantity: 1
-            description: Dyno formation
-        build_stack:
-          type: string
-          description: 'Stack for the next build (Heroku: build_stack)'
-        stack:
-          type: string
-          description: 'Stack currently deployed (Heroku: stack)'
-        region:
-          type: string
-        buildpacks:
-          type: array
-          items:
-            type: object
-            title: AppBuildpack
-            properties:
-              url:
-                type: string
-        description:
-          type: string
-          nullable: true
-        pipeline_stage:
-          type: string
-          nullable: true
-        policy_allow_websockets:
-          type: boolean
-        policy_response_timeout:
-          type: integer
-        policy_max_connections:
-          type: integer
-        policy_erosion_resistance_seconds:
-          type: integer
-        policy_share_process_namespace:
-          type: boolean
-        policy_temporary_self_signed:
-          type: boolean
-        created_at:
-          type: string
-          format: date_time
-        updated_at:
-          type: string
-          format: date_time
-        deleted_at:
-          type: string
-          format: date_time
-          nullable: true
-        web_url:
-          type: string
-          description: Full HTTPS URL for the application
-        git_url:
-          type: string
-          description: Git push URL for deploying via git push
-        branch:
-          type: string
-          nullable: true
-          description: GitHub branch for the application
-        environment_id:
-          type: string
-          format: uuid
-        ssh_host:
-          type: string
-          description: SSH host for running one-off dynos
-          nullable: false
-        ssh_port:
-          type: integer
-          description: SSH port for running one-off dynos
-          nullable: false
-      required:
-      - id
-      - name
-      - team
-      - build_stack
-      - region
-      - ssh_host
-      - ssh_port
     process:
       type: object
       properties:
